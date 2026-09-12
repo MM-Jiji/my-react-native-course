@@ -73,3 +73,10 @@ return (
 //    1-Your item don't have a unique ID.
 //    2-The list is completely static, you never add or remove items.
 //    3-The list is never reordered or filtered.
+export const NameList = () => {
+    const names = ["Bruce", "Clark", "Diana", "Bruce"];
+
+    const nameList = names.map((name, index) => <h2 key={index}>{name}</h2>);
+
+    return <div>{nameList}</div>;
+};
