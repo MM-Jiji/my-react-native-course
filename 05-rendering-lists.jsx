@@ -49,7 +49,9 @@ export const ProductList = () => {
 //  -Key is a special prop that React uses internally.
 
 return (
-        <div key={product.id}>
+        // Not adding the key prop will result in an error in the browser console
+        // telling you that: Each child in a list should have a unique "key" prop.
+        <div key={product.id}> 
                 <h2>Our Products</h2>
                 {products.map(product => {
                     return (
