@@ -63,3 +63,13 @@ return (
                 })}
         </div>
     );
+
+
+//  V)Index as Key Anti-Pattern:
+//    The problem with using index as key, is that index represents the possition of the item and not the item itself.
+//    That can be lead to subtle and confusing bugs when the order of items changes in the list.
+
+//  VI)When is it safe to use index as key ?
+//    1-Your item don't have a unique ID.
+//    2-The list is completely static, you never add or remove items.
+//    3-The list is never reordered or filtered.
