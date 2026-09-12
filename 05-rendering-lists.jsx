@@ -1,0 +1,63 @@
+// I)Rendering lists:
+//   To render a list of items in React, we need to take our data and put it in an array, 
+//   then transform that array into HTML we need.
+export const ProductList = () => {
+
+    const products = [
+        {
+            id: 1,
+            name: "Laptop",
+            price: 999,
+        },
+        {
+            id: 2,
+            name: "Phone",
+            price: 699,
+        },
+        {
+            id: 3,
+            name: "Tablet",
+            price: 499,
+        },
+    ];
+    
+    return (
+        <div>
+            <h2>Our Products</h2>
+            {products.map(product => {
+                return (
+                    <div>
+                        <h3>{product.name}</h3>
+                        <p>Price: ${product.price}</p>
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
+
+// II)Lists and Keys:
+//  An important point when we use lists to render items in React is to add an identifier for the rendered object making it easy 
+//  to render the element more efficiently. And to do so, we use the id element form our list or any unique value within our elements.
+
+// III)Why does React need keys ?
+//  -Keys are used by React to track the items in the list.
+//  -They are crucial for React to efficiently update the UI.
+
+// IV)Rules of key:
+//  -The key prop goes on the outermost repeated element.
+//  -Key is a special prop that React uses internally.
+
+return (
+        <div key={product.id}>
+                <h2>Our Products</h2>
+                {products.map(product => {
+                    return (
+                        <div>
+                            <h3>{product.name}</h3>
+                            <p>Price: ${product.price}</p>
+                        </div>
+                    );
+                })}
+        </div>
+    );
