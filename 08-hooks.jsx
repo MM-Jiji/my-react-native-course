@@ -29,3 +29,17 @@ export const Counter = () => {
 //    -Rendering from local storage.
 //    -Fetching data from an API.
 //    -Doing any other heavy computation.
+
+// II)Rules of hooks:
+//    Rule1: Only call hooks at the top level of your function. (Top level means directly in the function body, before
+//           any is statements, loops, or early returns).
+//    Rule2: Only call hooks from React functions.
+
+// III)Why Rules of hooks exists ?
+//     -The answer is PREDICTABILITY.
+//     -React needs to know that every time your component renders, it will call the exact same hooks in the exact same order.
+//     -This lets React:
+//        -Keep track of state between renders.
+//        -Know which useState call corresponds to which piece of state.
+//        -Optimize performance.
+//        -Provide helpful error messages.
